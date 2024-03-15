@@ -11,6 +11,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 
+// thanh lat nguyen 
+
 public class ApiService {
 
     HttpLoggingInterceptor httpLoggingInterceptor =
@@ -30,6 +32,10 @@ public class ApiService {
             .build()
             .create(ApiService.class);
 
+    @GET("filter.php?i=chicken_breast")
+    Observable<mealsObj> callApi();
+	
+	
     @GET("filter.php?i=chicken_breast")
     Observable<mealsObj> callApi();
 }
